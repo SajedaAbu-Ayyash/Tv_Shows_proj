@@ -1,0 +1,62 @@
+<!-- {% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Read</title>
+  </head>
+  <body>
+    <a href="/shows" style="margin-right: 5%">Go Back</a>
+    <div>
+      <h1>TV Show # {{ show.id }}</h1>
+      <p>Title: {{ show.title }}</p>
+      <p>Network: {{ show.network }}</p>
+      <p>Release Date: {{ show.release_date }}</p>
+      <p>Description: {{ show.description }}</p>
+
+      <p>Last Updated: {{ show.updated_at }}</p>
+      <p>
+        <a href="/edit_show/{{ show.id }}">Edit</a> |
+        <a href="/delete_show/{{ show.id }}">Delete</a>
+      </p>
+    </div>
+  </body>
+</html> -->
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Read</title>
+    <!-- Link to Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        /* Custom styles */
+        body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <a href="/shows" class="btn btn-secondary mb-3">Go Back</a>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <h1 class="mb-4">TV Show # {{ show.id }}</h1>
+                <p><strong>Title:</strong> {{ show.title }}</p>
+                <p><strong>Network:</strong> {{ show.network }}</p>
+                <p><strong>Release Date:</strong> {{ show.release_date }}</p>
+                <p><strong>Description:</strong> {{ show.description }}</p>
+                <p><strong>Last Updated:</strong> {{ show.updated_at }}</p>
+                <p>
+                    <a href="/edit_show/{{ show.id }}" class="btn btn-primary">Edit</a>
+                    <a href="/delete_show/{{ show.id }}" class="btn btn-danger">Delete</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Link to Bootstrap JS if needed -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM
